@@ -5,14 +5,9 @@
 {"filter":[{"var":"refunds"},{"==":[{"var":"id"},{"var": "test"}]}]}
 
 // LOGIC ALTERNATE
-// i guess I could preprocess the logic and replace {"var": "test"} with
-// the actual value of test before calling apply
-// ** but that would really mean the rule is invalid
-// ** it would be more efficent though
-// ** otherwise, I could pre-process the data and augment it
-//.   with the timeMarkers --- which I started to do.
-//.  that would work, and reduce the number of rules.
-///. i mean i already have duplicate instances of the time in the rules now.
+
+// the following "Handlbars" syntax allows access to parent level vars
+// only works with json-logic-engine -- not with the normal jsonlogic
 ///. 
 /// the advantage would be fewer logic blocks to evaluate
 {"filter":[{"var":""},{"==":[{"var":"id"},{"var": "../../test"}]}]}
