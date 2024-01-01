@@ -15,7 +15,7 @@
 ///. i mean i already have duplicate instances of the time in the rules now.
 ///. 
 /// the advantage would be fewer logic blocks to evaluate
-{"filter":[{"var":""},{"==":[{"var":"id"},{"var": "test"}]}]}
+{"filter":[{"var":""},{"==":[{"var":"id"},{"var": "../../test"}]}]}
 
 // DATA ALTERNATE
 [
