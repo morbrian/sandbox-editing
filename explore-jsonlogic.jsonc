@@ -2,10 +2,41 @@
 
 
 // LOGIC
-{"filter":[{"var":"refunds"},{"==":[{"var":"id"},12345]}]}
+{"filter":[{"var":"refunds"},{"==":[{"var":"id"},{"var": "test"}]}]}
+
+// LOGIC ALTERNATE
+// i guess I could preprocess the logic and replace {"var": "test"} with
+// the actual value of test before calling apply
+// ** but that would really mean the rule is invalid
+// ** it would be more efficent though
+// ** otherwise, I could pre-process the data and augment it
+//.   with the timeMarkers --- which I started to do.
+//.  that would work, and reduce the number of rules.
+///. i mean i already have duplicate instances of the time in the rules now.
+///. 
+/// the advantage would be fewer logic blocks to evaluate
+{"filter":[{"var":""},{"==":[{"var":"id"},{"var": "test"}]}]}
+
+// DATA ALTERNATE
+[
+    {
+      
+      "id": 12345,
+      "detail": "yay it worked"
+    },
+    {
+      "id": 111,
+      "detail": "uh oh"
+    },
+    {
+      "id": 222,
+      "detail": "houston help"
+    }
+  ]
 
 // DATA
 {
+  "test": 12345,
   "refunds": [
     {
       "id": 12345,
@@ -21,3 +52,25 @@
     }
   ]
 }
+
+//========================
+// Rule
+{
+ "some": [
+    { "var":"x" },
+    {
+       "in": [ {"var": ""}, {"var": "y"} ]
+    }
+  ]
+}
+
+// DATA
+{ 
+  "x": [-1, 0, 1],
+  "y": [2, 3, 1]
+}
+
+
+
+
+
