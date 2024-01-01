@@ -1,0 +1,23 @@
+//This is a test of using github as an editor because double quotes aren't otherwise working on my ipad.
+
+
+// LOGIC
+{"filter":[{"var":"refunds"},{"==":[{"var":"id"},12345]}]}
+
+// DATA
+{
+  "refunds": [
+    {
+      "id": 12345,
+      "detail": "yay it worked"
+    },
+    {
+      "id": 111,
+      "detail": "uh oh"
+    },
+    {
+      "id": 222,
+      "detail": "houston help"
+    }
+  ]
+}
